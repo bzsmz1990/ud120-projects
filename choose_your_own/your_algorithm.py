@@ -31,11 +31,42 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
+################################################################################
+### K Neighbors Classifier
+################################################################################
+# from sklearn.neighbors import KNeighborsClassifier
+#
+# clf = KNeighborsClassifier(n_neighbors = 15)
+# clf = clf.fit(features_train, labels_train)
+# pred = clf.predict(features_test)
+#
+# from sklearn.metrics import accuracy_score
+# print accuracy_score(pred, labels_test)
+
+
+################################################################################
+### AdaBoost Classifier
+################################################################################
+# from sklearn.ensemble import AdaBoostClassifier
+# clf = AdaBoostClassifier(algorithm="SAMME.R", n_estimators = 100)
+# clf = clf.fit(features_train, labels_train)
+# pred = clf.predict(features_test)
+#
+# from sklearn.metrics import accuracy_score
+# print accuracy_score(pred, labels_test)
 
 
 
+################################################################################
+### Random Forest Classifier
+################################################################################
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier(n_estimators = 10)
+clf = clf.fit(features_train, labels_train)
+pred = clf.predict(features_test)
 
-
+from sklearn.metrics import accuracy_score
+print accuracy_score(pred, labels_test)
 
 
 try:
